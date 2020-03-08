@@ -1,5 +1,3 @@
-##
-
 This is just an exapansion/modification of what's based on here.
 https://github.com/trekhleb/javascript-algorithms
 

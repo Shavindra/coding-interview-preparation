@@ -1,0 +1,8 @@
+{
+    "root": true,
+    "extends": ["airbnb", "eslint:recommended"],
+    "plugins": ["jest"],
+    "env": {
+      "jest/globals": true
+    }
+  }
