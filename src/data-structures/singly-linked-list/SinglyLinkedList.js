@@ -12,7 +12,6 @@ export class SinglyLinkedList {
         let currentNode = this.head;
 
         while (currentNode !== null) {
-            console.log(currentNode.data);
             yield currentNode.data;
             currentNode = currentNode.next;
         }

@@ -60,8 +60,6 @@ describe('LinkedList', () => {
         const val1 = gen.next();
         const val2 = gen.next();
         const val3 = gen.next();
-
-        console.log(val1, val2, val3);
-    })
+    });
 });
 
