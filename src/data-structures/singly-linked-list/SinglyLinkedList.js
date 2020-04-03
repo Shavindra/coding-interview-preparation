@@ -7,6 +7,21 @@ export class SinglyLinkedList {
         this.tail = null;
     }
 
+    *values(){
+        
+        let currentNode = this.head;
+
+        while (currentNode !== null) {
+            console.log(currentNode.data);
+            yield currentNode.data;
+            currentNode = currentNode.next;
+        }
+    }
+
+    [Symbol.iterator]() {
+        return this.values();
+    }
+
     append(data) {
         const newNode = new LinkedListNode(data);
 
