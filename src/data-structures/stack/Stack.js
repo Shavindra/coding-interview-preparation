@@ -1,4 +1,4 @@
-import { SinglyLinkedList } from "../singly-linked-list/singlyLinkedList";
+import { SinglyLinkedList } from "../singly-linked-list/SinglyLinkedList";
 
 export class Stack {
   constructor() {

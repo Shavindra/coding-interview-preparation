@@ -1,8 +1,9 @@
+[![Build Status](https://travis-ci.org/Shavindra/coding-interview-preparation.svg?branch=master)](https://travis-ci.org/Shavindra/coding-interview-preparation)
+
 This is just an exapansion/modification of what's based on here.
 https://github.com/trekhleb/javascript-algorithms
 
 Primarily done this for my own refreshing knowledge purposes.
-
 
 ## Data Structures
 - [ ] Linked List
