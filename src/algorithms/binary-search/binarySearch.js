@@ -1,4 +1,4 @@
-import { Comparator } from "../../utils/compartor/Comparator";
+import { Comparator } from "../../utils/comparator/Comparator";
 
 /**
  * Binary search implementation.
@@ -24,8 +24,8 @@ import { Comparator } from "../../utils/compartor/Comparator";
  *       next iteration values = [-35, 17, 22, 55, 10]
  *   Repeat process  
  */
-export function binarySearch(sortedArray, element, comparatorCallback) {
-  const compartor = new Comparator(comparatorCallback);
+export function binarySearch(sortedArray, element, comparatorFunction) {
+  const comparator = new Comparator(comparatorFunction);
 
   // Indeces contains boundries of current sub-array
   let startIndex = 0;
@@ -34,12 +34,12 @@ export function binarySearch(sortedArray, element, comparatorCallback) {
   while (startIndex <= endIndex) {
     const middleIndex = startIndex + Math.floor((endIndex - startIndex) / 2); // 5
 
-    if (compartor.equal(sortedArray[middleIndex], element)) {
+    if (comparator.equal(sortedArray[middleIndex], element)) {
       return middleIndex; // e.g. sortedArray[middleIndex] = 12
     }
 
     // Decide which half to choose for seeking next: left or right one
-    if (compartor.lessThan(sortedArray[middleIndex], element)) {
+    if (comparator.lessThan(sortedArray[middleIndex], element)) {
       startIndex = middleIndex + 1; // e.g. at index 6
     } else {
       // Go to the left half of the array.
