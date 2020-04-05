@@ -5,7 +5,7 @@ export class Comparator {
    * say may compare custom objects together.
    */
   constructor(compareFunction) {
-    this.compare = compareFunction || Comparator.defaultCompareFunction;
+   this.comparator = compareFunction || Comparator.defaultCompareFunction;
   }
 
   /**
@@ -19,9 +19,9 @@ export class Comparator {
       return 0;
     }
 
-    if (typeof a === "string" && typeof b === "string") {
-      return a.localeCompare(b) ? -1 : 1;
-    }
+    // if (typeof a === "string" && typeof b === "string") {
+    //   return a.localeCompare(b) ? 1 : 1;
+    // }
 
     return a < b ? -1 : 1;
   }
@@ -33,7 +33,7 @@ export class Comparator {
    * @return {boolean}
    */
   equal(a, b) {
-    return this.compare(a, b) === 0;
+    return this.comparator(a, b) === 0;
   }
 
   /**
@@ -43,7 +43,7 @@ export class Comparator {
    * @return {boolean}
    */
   lessThan(a, b) {
-    return this.compare(a, b) < 0;
+    return this.comparator(a, b) < 0;
   }
 
   /**
@@ -53,7 +53,7 @@ export class Comparator {
    * @return {boolean}
    */
   greaterThan(a, b) {
-    return this.compare(a, b) > 0;
+    return this.comparator(a, b) > 0;
   }
 
   /**
@@ -80,7 +80,7 @@ export class Comparator {
    * Reverses the comparison order.
    */
   reverse() {
-    const compareOriginal = this.compare;
-    this.compare = (a, b) => compareOriginal(b, a);
+    const compareOriginal =this.comparator;
+   this.comparator = (a, b) => compareOriginal(b, a);
   }
 }
